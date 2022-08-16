@@ -1,0 +1,223 @@
+---
+title: 字型屬性
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="wordAttribute">
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <div class="H2AndRadio">
+                <h2>首行縮排</h2>
+                <div class="radio">
+                    <input name='suffixRadio' type='radio' id="textIndentLengthSize" value="px"><label
+                        for="textIndentLengthSize">長度</label>
+                    <input name='suffixRadio' type='radio' id="textIndentPercentageSize" value="%"><label
+                        for="textIndentPercentageSize">百分比</label>
+                </div>
+            </div>
+            <div class="input">
+                <label for="textIndent">text-indent:</label><input type="text" class="InputText" id="textIndent">;
+                <!-- <label for="textIndent" class="inputSuffix"></label> -->
+                <select class="textIndentSelect" name="textIndentSelect" id="textIndentSelect">
+                    <option>-- text-indent length --</option>
+                    <option value="px">px</option>
+                    <option value="pt">pt</option>
+                    <option value="em">em</option>
+                    <option value="ex">ex</option>
+                    <option value="in">in</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleTextIndent">
+            <p class="exampleWord">範例文字<br>範例文字</p>
+            <p class="exampleCss">text-indent:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <h2>文字對齊方式</h2>
+            <div class="input">
+                <label for="textAlign">text-align:</label><input type="text" class="InputText" id="textAlign">;
+                <select class="textAlignSelect" name="textAlign" id="textAlign">
+                    <option>-- text-align --</option>
+                    <option value="start">start</option>
+                    <option value="end">end</option>
+                    <option value="left">left</option>
+                    <option value="right">right</option>
+                    <option value="center">center</option>
+                    <option value="justify">justify</option>
+                    <option value="match-parent">match-parent</option>
+                    <!-- <option value="start end">start end</option> -->
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleTextAlign">
+            <p class="exampleWord">範例文字 範例文字 範例文字 範例文字 範例文字</p>
+            <p class="exampleCss">text-align:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <div class="H2AndRadio">
+                <h2>字母間距</h2>
+                <div class="radio">
+                    <input name='suffixRadio' type='radio' id="letterSpacingNormalSize" value="normal"><label
+                        for="letterSpacingNormalSize">normal</label>
+                    <input name='suffixRadio' type='radio' id="letterSpacingLengthSize"><label
+                        for="letterSpacingLengthSize">長度</label>
+                </div>
+            </div>
+            <div class="input">
+                <label for="letterSpacing">letter-spacing:</label><input type="text" class="InputText"
+                    id="letterSpacing">;
+                <!-- <label for="letterSpacing" class="inputSuffix"></label> -->
+                <select class="letterSpacingSelect" name="letterSpacingSelect" id="letterSpacingSelect">
+                    <option>-- letter-spacing --</option>
+                    <option value="px">px</option>
+                    <option value="pt">pt</option>
+                    <option value="em">em</option>
+                    <option value="ex">ex</option>
+                    <option value="in">in</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleLetterSpacing">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">letter-spacing:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <div class="H2AndRadio">
+                <h2>文字間距</h2>
+                <div class="radio">
+                    <input name='suffixRadio' type='radio' id="wordSpacingNormalSize" value="normal"><label
+                        for="wordSpacingNormalSize">normal</label>
+                    <input name='suffixRadio' type='radio' id="wordSpacingLengthSize"><label
+                        for="wordSpacingLengthSize">長度</label>
+                    <input name='suffixRadio' type='radio' id="wordSpacingPercentageSize" value="%"><label
+                        for="wordSpacingPercentageSize">百分比</label>
+                </div>
+            </div>
+            <div class="input">
+                <label for="wordSpacing">word-spacing:</label><input type="text" class="InputText" id="wordSpacing">;
+                <!-- <label for="wordSpacing" class="inputSuffix"></label> -->
+                <select class="wordSpacingSelect" name="wordSpacingSelect" id="wordSpacingSelect">
+                    <option>-- word-spacing --</option>
+                    <option value="px">px</option>
+                    <option value="pt">pt</option>
+                    <option value="em">em</option>
+                    <option value="ex">ex</option>
+                    <option value="in">in</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleWordSpacing">
+            <p class="exampleWord">範例文字 範例文字</p>
+            <p class="exampleCss">word-spacing:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <h2>大小寫轉換</h2>
+            <div class="input">
+                <label for="textTransform">text-transform:</label><input type="text" class="InputText"
+                    id="textTransform">;
+                <select class="textTransformSelect" name="textTransformSelect" id="textTransformSelect">
+                    <option>-- text-transform --</option>
+                    <option value="none">none</option>
+                    <option value="capitalize">capitalize</option>
+                    <option value="uppercase">uppercase</option>
+                    <option value="lowercase">lowercase</option>
+                    <!-- <option value="full-width">full-width</option> -->
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleTextTransform">
+            <p class="exampleWord" style="border:none;">abCdE</p>
+            <p class="exampleCss">text-transform:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <h2>空白字元</h2>
+            <div class="input">
+                <label for="whiteSpace">white-space:</label><input type="text" class="InputText" id="whiteSpace">;
+                <select class="whiteSpaceSelect" name="whiteSpaceSelect" id="whiteSpaceSelect">
+                    <option>-- white-space --</option>
+                    <option value="normal">normal</option>
+                    <option value="pre">pre</option>
+                    <option value="nowrap">nowrap</option>
+                    <option value="pre-wrap">pre-wrap</option>
+                    <option value="pre-line">pre-line</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleWhiteSpace">
+            <p class="exampleWord" style="width:120px">範例文字範例文字</p>
+            <p class="exampleCss">white-space:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <h2>文字陰影</h2>
+            <div class="input">
+                <label for="textShadow">text-shadow:</label><input type="text" class="InputText" id="textShadow">;
+                <select class="textShadowSelect" name="textShadowSelect" id="textShadowSelect">
+                    <option>-- text-shadow --</option>
+                    <option value="none">none</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleTextShadow">
+            <p class="exampleWord" style="width:120px">範例文字</p>
+            <p class="exampleCss">text-shadow:<span></span>;</p>
+        </div>
+    </div>
+    <div class="WordAttr">
+        <div class="inputAndTitle">
+            <h2>文字裝飾</h2>
+            <div class="input">
+                <label for="textDecoration">text-decoration:</label><input type="text" class="InputText"
+                    id="textDecoration">;
+                <select class="textDecorationLineSelect" name="textDecorationLineSelect" id="textDecorationLineSelect">
+                    <option>-- text-decoration-line --</option>
+                    <option value="none">none</option>
+                    <option value="underline">underline</option>
+                    <option value="overline">overline</option>
+                    <option value="line-through">line-through</option>
+                    <!-- <option value="blink">blink</option> -->
+                </select>
+                <select class="textDecorationStyleSelect" name="textDecorationStyleSelect"
+                    id="textDecorationStyleSelect">
+                    <option>-- text-decoration-style --</option>
+                    <option value="solid">solid</option>
+                    <option value="double">double</option>
+                    <option value="dotted">dotted</option>
+                    <option value="dashed">dashed</option>
+                    <option value="wavy">wavy</option>
+                </select>
+                <select class="textDecorationColorSelect" name="textDecorationColorSelect"
+                    id="textDecorationColorSelect">
+                    <option>-- text-decoration-color --</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="yellow">yellow</option>
+                    <option value="pink">pink</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleTextDecoration">
+            <p class="exampleWord" style="width:120px">範例文字</p>
+            <p class="exampleCss">text-decoration:<span></span>;</p>
+        </div>
+    </div>
+</div>

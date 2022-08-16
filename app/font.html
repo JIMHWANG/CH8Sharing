@@ -1,0 +1,105 @@
+---
+title: 字型屬性
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="fontAttribute">
+    <div class="Font">
+        <div class="inputAndTitle">
+            <div class="H2AndRadio">
+                <h2>文字大小</h2>
+                <div class="radio">
+                    <input name='suffixRadio' type='radio' id="fontSizeLengthSize" value="px"><label
+                        for="lengthSize">長度</label>
+                    <input name='suffixRadio' type='radio' id="fontSizeAbsoluteSize" value="absolute"><label
+                        for="absoluteSize">絕對大小</label>
+                    <input name='suffixRadio' type='radio' id="fontSizeRelativeSize" value="relative"><label
+                        for="relativeSize">相對大小</label>
+                    <input name='suffixRadio' type='radio' id="fontSizePercentageSize" value="%"><label
+                        for="percentageSize">百分比</label>
+                </div>
+            </div>
+            <div class="input">
+                <label for="fontSize">font-size:</label><input type="text" class="InputText" id="fontSize"><label
+                    for="fontSize" class="inputSuffix"></label>;
+                <select class="fontSizeSelect" name="fontSizeSelect" id="fontSizeSelect">
+                    <option>-- font-size-length --</option>
+                    <option value="px">px</option>
+                    <option value="pt">pt</option>
+                    <option value="em">em</option>
+                    <option value="ex">ex</option>
+                    <option value="in">in</option>
+                    <option value="cm">cm</option>
+                    <option value="mm">mm</option>
+                </select>
+                <select class="fontSizeAbsoluteSelect" name="fontSizeAbsoluteSelect" id="fontSizeAbsoluteSelect">
+                    <option>-- font-size-absolute --</option>
+                    <option value="xx-small">xx-small</option>
+                    <option value="x-small">x-small</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                    <option value="x-large">x-large</option>
+                    <option value="xx-large">xx-large</option>
+                </select>
+                <select class="fontSizeRelativeSelect" name="fontSizeRelativeSelect" id="fontSizeRelativeSelect">
+                    <option>-- font-size-relative --</option>
+                    <option value="smaller">smaller</option>
+                    <option value="larger">larger</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleFontSize">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">font-size:<span></span>;</p>
+        </div>
+    </div>
+    <div class="Font">
+        <div class="inputAndTitle">
+            <h2>文字樣式</h2>
+            <div class="input">
+                <label for="fontStyle">font-style:</label><input type="text" class="InputText" id="fontStyle"><label
+                    for="fontStyle" class="inputSuffix"></label>;
+                <select class="fontStyleSelect" name="fontStyle" id="fontStyle">
+                    <option value="normal">normal</option>
+                    <option value="italic">italic</option>
+                    <option value="oblique">oblique</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleFontStyle">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">font-style:<span></span>;</p>
+        </div>
+    </div>
+    <div class="Font">
+        <div class="inputAndTitle">
+            <h2>文字粗細</h2>
+            <div class="input">
+                <label for="fontWeight">font-weight:</label><input type="text" class="InputText" id="fontWeight"><label
+                    for="fontWeight" class="inputSuffix"></label>;
+                <select class="fontWeightSelect" name="fontWeight" id="fontWeight">
+                    <option value="normal">normal</option>
+                    <option value="bold">bold</option>
+                    <option value="bolder">bolder</option>
+                    <option value="lighter">lighter</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                    <option value="400">400</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleFontWeight">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">font-style:<span></span>;</p>
+        </div>
+    </div>
+</div>

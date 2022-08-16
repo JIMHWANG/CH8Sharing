@@ -1,0 +1,68 @@
+---
+title: 色彩屬性
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="colorAttribute">
+    <div class="Color">
+        <div class="inputAndTitle">
+            <h2>透過英文顏色名稱進行顏色變化</h2>
+            <div class="input">
+                <label for="EnglishColor">color:</label><input type="text" class="InputText" id="EnglishColor">;
+            </div>
+            <div class="input">
+                <label for="BGEnglishColor">background-color:</label> <input type="text" class="InputText"
+                    id="BGEnglishColor">;
+            </div>
+        </div>
+        <div class="example" id="exampleEnglishColor">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">color:<span>black</span>;</p>
+        </div>
+    </div>
+    <div class="Color">
+        <div class="inputAndTitle">
+            <h2>透過紅綠藍比例混合進行顏色變化</h2>
+            <div class="input">
+                <label for="RGBColor">color:rgba(</label><input type="text" class="InputText" id="RGBColor">);
+            </div>
+            <div class="input">
+                <label for="BGRGBColor">background-color:rgba(</label><input type="text" class="InputText"
+                    id="BGRGBColor">);
+            </div>
+        </div>
+        <div class="example" id="exampleRGBColor">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">color:<span>rgba(0,0,0,1)</span>;</p>
+        </div>
+    </div>
+    <div class="Color">
+        <div class="inputAndTitle">
+            <h2>十六進制表示</h2>
+            <div class="input">
+                <label for="HexColor">color:</label> <input type="text" class="InputText" id="HexColor">;
+            </div>
+            <div class="input">
+                <label for="BGHexColor">background-color:</label> <input type="text" class="InputText" id="BGHexColor">;
+            </div>
+        </div>
+        <div class="example" id="exampleHexColor">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">color:<span>#000000</span>;</p>
+        </div>
+    </div>
+    <div class="Color">
+        <div class="inputAndTitle">
+            <h2>透明度</h2>
+            <div class="input">
+                <label for="opacity">opacity:</label> <input type="text" class="InputText" id="opacity">;
+            </div>
+        </div>
+        <div class="example" id="exampleOpacity">
+            <p class="exampleWord">範例文字</p>
+            <p class="exampleCss">opacity:<span></span>;</p>
+        </div>
+    </div>
+</div>

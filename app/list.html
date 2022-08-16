@@ -1,0 +1,107 @@
+---
+title: 清單屬性
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div class="listAttribute">
+    <div class="List">
+        <div class="inputAndTitle">
+            <h2>項目符號與編號類型</h2>
+            <div class="input">
+                <label for="listStyleType">list-style-type:</label><input type="text" class="InputText"
+                    id="listStyleType">;
+                <select class="listStyleTypeSelect" name="listStyleType" id="listStyleType">
+                    <option>-- list-style-type --</option>
+                    <option value="disc">disc</option>
+                    <option value="circle">circle</option>
+                    <option value="square">square</option>
+                    <option value="none">none</option>
+                    <option value="decimal">decimal</option>
+                    <option value="decimal-leading-zero">decimal-leading-zero</option>
+                    <option value="lower-roman">lower-roman</option>
+                    <option value="upper-roman">upper-roman</option>
+                    <option value="georgian">georgian</option>
+                    <option value="armenian">armenian</option>
+                    <option value="lower-alpha">lower-alpha</option>
+                    <option value="lower-latin">lower-latin</option>
+                    <option value="upper-alpha">upper-alpha</option>
+                    <option value="upper-latin">upper-latin</option>
+                    <option value="lower-greek">lower-greek</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleListStyleType">
+            <ol class="exampleWord">
+                <li>範例文字</li>
+                <li>範例文字</li>
+                <li>範例文字</li>
+            </ol>
+            <p class="exampleCss">list-style-type:<span></span>;</p>
+        </div>
+    </div>
+    <div class="List">
+        <div class="inputAndTitle">
+            <h2>圖片項目符號</h2>
+            <div class="input">
+                <label for="listStyleImage">list-style-image:url(</label><input type="text" class="InputText"
+                    id="listStyleImage">);
+                <select class="listStyleImageSelect" name="listStyleImage" id="listStyleImage">
+                    <option>-- list-style-image --</option>
+                    <option value="none">none</option>
+                    <option value="https://upload.cc/i1/2022/08/07/tnU1YO.png">Micron</option>
+                    <option value="https://upload.cc/i1/2022/08/07/5QnWOg.png">Facebook</option>
+                    <option value="https://upload.cc/i1/2022/08/07/MnOkSs.png">Instagram</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleListStyleImage">
+            <ol class="exampleWord">
+                <li>範例文字</li>
+                <li>範例文字</li>
+                <li>範例文字</li>
+            </ol>
+            <p class="exampleCss">list-style-image:<span></span>;</p>
+        </div>
+    </div>
+    <div class="List">
+        <div class="inputAndTitle">
+            <h2>項目符號與編號位置</h2>
+            <div class="input">
+                <label for="listStylePosition">list-style-position:</label><input type="text" class="InputText"
+                    id="listStylePosition">;
+                <select class="listStylePositionSelect" name="listStylePosition" id="listStylePosition">
+                    <option>-- list-style-position --</option>
+                    <option value="outside">outside</option>
+                    <option value="inside">inside</option>
+                </select>
+            </div>
+        </div>
+        <div class="example" id="exampleListStylePosition">
+            <ol class="exampleWord" style="list-style-image:url(https://upload.cc/i1/2022/08/07/tnU1YO.png)">
+                <li style="list-style-position:outside">範例文字</li>
+                <li>範例文字</li>
+                <li>範例文字</li>
+            </ol>
+            <p class="exampleCss">list-style-position:<span></span>;</p>
+        </div>
+    </div>
+    <div class="List">
+        <div class="inputAndTitle">
+            <h2>清單速記</h2>
+            <div class="input">
+                <label for="listStyleQuick">list-style:</label><input type="text" class="InputText" id="listStyleQuick"
+                    style="width: 400px;">;
+            </div>
+        </div>
+        <div class="example" id="exampleListStyleQuick">
+            <ol class="exampleWord">
+                <li style="list-style-position:outside">範例文字</li>
+                <li>範例文字</li>
+                <li>範例文字</li>
+            </ol>
+            <p class="exampleCss">list-style:<span></span>;</p>
+        </div>
+    </div>
+</div>
