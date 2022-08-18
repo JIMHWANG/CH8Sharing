@@ -159,17 +159,15 @@ var _loop = function _loop(i) {
         findExample("ListStyleType").childNodes[1].style = "list-style-type:".concat(InputTextAll[i].value);
         findExample("ListStyleType").childNodes[3].innerHTML = "list-style-type:".concat(InputTextAll[i].value);
       } else if (/listStyleImage/.test(InputTextAll[i].id)) {
-        findExample("ListStyleImage").childNodes[1].style = "list-style-image:url(".concat(InputTextAll[i].value, ")"); // findExample("ListStyleImage").childNodes[3].innerHTML = `list-style-image:url(${InputTextAll[i].value})`;
+        findExample("ListStyleImage").childNodes[1].style = "list-style-image:url(".concat(InputTextAll[i].value, ")");
       } else if (/listStylePosition/.test(InputTextAll[i].id)) {
         findExample("ListStylePosition").childNodes[1].style = "list-style-image:url(https://upload.cc/i1/2022/08/07/tnU1YO.png);list-style-position:".concat(InputTextAll[i].value);
         findExample("ListStylePosition").childNodes[3].innerHTML = "list-style-position:".concat(InputTextAll[i].value);
       } else if (/listStyleQuick/.test(InputTextAll[i].id)) {
-        findExample("ListStyleQuick").childNodes[1].style = "list-style:".concat(InputTextAll[i].value); // findExample("ListStyleQuick").childNodes[3].innerHTML = `list-style:${InputTextAll[i].value}`;
-        // findExample("ListStyleQuick").childNodes[3].innerHTML = `list-style-position:${InputTextAll[i].value}`;
+        findExample("ListStyleQuick").childNodes[1].style = "list-style:".concat(InputTextAll[i].value);
       } else if (/textIndent/.test(InputTextAll[i].id)) {
         findExample("TextIndent").childNodes[1].style = "text-indent:".concat(InputTextAll[i].value);
-        findExample("TextIndent").childNodes[3].innerHTML = "text-indent:".concat(InputTextAll[i].value, ";"); // findExample("TextIndent").childNodes[1].style = `text-indent:${InputTextAll[i].value + findInputSuffix("textIndent")}`;
-        // findExample("TextIndent").childNodes[3].innerHTML = `text-indent:${InputTextAll[i].value + findInputSuffix("textIndent")};`;
+        findExample("TextIndent").childNodes[3].innerHTML = "text-indent:".concat(InputTextAll[i].value, ";");
       } else if (/textAlign/.test(InputTextAll[i].id)) {
         findExample("TextAlign").childNodes[1].style = "text-align:".concat(InputTextAll[i].value);
         findExample("TextAlign").childNodes[3].innerHTML = "text-align:".concat(InputTextAll[i].value, ";");
@@ -203,8 +201,9 @@ for (var i = 0; i < InputTextAll.length; i++) {
 
 var FontSizeRadioAll = document.getElementsByName('fontSizeRadio');
 var SuffixRadioAll = document.getElementsByName('suffixRadio');
-var absoluteSelect = document.querySelector('.absoluteSelect');
-var relativeSelect = document.querySelector('.relativeSelect');
+var fontSizeLengthSelect = document.querySelector('.fontSizeLengthSelect');
+var fontSizeAbsoluteSelect = document.querySelector('.fontSizeAbsoluteSelect');
+var fontSizeRelativeSelect = document.querySelector('.fontSizeRelativeSelect');
 var fontStyleSelect = document.querySelector('.fontStyleSelect');
 var fontWeightSelect = document.querySelector('.fontWeightSelect');
 var listStyleTypeSelect = document.querySelector('.listStyleTypeSelect');
@@ -221,7 +220,7 @@ var textDecorationStyleSelect = document.querySelector('.textDecorationStyleSele
 var textDecorationColorSelect = document.querySelector('.textDecorationColorSelect');
 var textIndentSelect = document.querySelector('.textIndentSelect');
 var selectionList = [{
-  Selector: fontSizeSelect,
+  Selector: fontSizeLengthSelect,
   SelectorFor: "fontSize"
 }, {
   Selector: fontSizeAbsoluteSelect,
@@ -282,7 +281,7 @@ var _loop2 = function _loop2(_i) {
 
     if (SuffixRadioAll[_i].value === "%") {
       findInput(SuffixRadioAll[_i].value, FindInputId(SuffixRadioAll[_i].id));
-      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "Select")).style = "display:none";
+      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "LengthSelect")).style = "display:none";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "RelativeSelect")).style = "display:none";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "AbsoluteSelect")).style = "display:none";
     } else if (SuffixRadioAll[_i].value === "normal") {
@@ -291,14 +290,14 @@ var _loop2 = function _loop2(_i) {
     } else if (SuffixRadioAll[_i].value === "absolute") {
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "AbsoluteSelect")).style = "display:inline";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "RelativeSelect")).style = "display:none";
-      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "Select")).style = "display:none";
+      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "LengthSelect")).style = "display:none";
     } else if (SuffixRadioAll[_i].value === "relative") {
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "RelativeSelect")).style = "display:inline";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "AbsoluteSelect")).style = "display:none";
-      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "Select")).style = "display:none";
+      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "LengthSelect")).style = "display:none";
     } else {
-      console.log(FindInputId(SuffixRadioAll[_i].id));
-      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "Select")).style = "display:inline";
+      // console.log(FindInputId(SuffixRadioAll[i].id));
+      eval("".concat(FindInputId(SuffixRadioAll[_i].id), "LengthSelect")).style = "display:inline";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "RelativeSelect")).style = "display:none";
       eval("".concat(FindInputId(SuffixRadioAll[_i].id), "AbsoluteSelect")).style = "display:none";
     }
